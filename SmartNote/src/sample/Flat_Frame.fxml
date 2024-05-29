@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: #00000000; -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLDocumentController">
+   <children>
+      <VBox id="vbox" alignment="TOP_RIGHT" style="-fx-background-color: #f6f6f6; -fx-border-radius: 8; -fx-background-radius: 8;" stylesheets="@font_tajawal.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefWidth="650.0">
+                     <children>
+                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@lo.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="8.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Text id="titre" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: black;" text="t9dirat">
+                           <HBox.margin>
+                              <Insets top="6.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Text id="titrebar" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="● خاص بالتعليم المتوسط">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="8.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#minusApp" style="-fx-background-color: TRANSPARENT;">
+                           <graphic>
+                              <FontAwesomeIconView id="icon" glyphName="MINUS" size="15.0">
+                                 <effect>
+                                    <DropShadow color="WHITE" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#closeApp" style="-fx-background-color: TRANSPARENT;">
+                           <graphic>
+                              <FontAwesomeIconView id="icon" glyphName="CLOSE" size="15.0">
+                                 <effect>
+                                    <DropShadow color="WHITE" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </FontAwesomeIconView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets right="25.0" top="20.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0">
+               <children>
+                  <Button id="btn" layoutX="698.0" layoutY="10.0" mnemonicParsing="false" onAction="#onExchangeNote" text="نسخ النقاط من ثلاثي إلى ثلاثي اخر" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="COPY" size="13.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="7.0" left="14.0" right="14.0" top="7.0" />
+                     </padding>
+                  </Button>
+                  <TextField fx:id="src_excel" editable="false" prefHeight="40.0" prefWidth="328.0" style="-fx-background-radius: 1; -fx-border-color: #00b0f0; -fx-background-color: white;">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button id="btn" mnemonicParsing="false" onAction="#handleButtonAction" text="ارفع ملف الحجز" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="FILE" size="13.0" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tajawal-Medium" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="7.0" left="14.0" right="14.0" top="7.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets right="20.0" top="60.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Line endX="100.0" startX="600.0" stroke="#d0c3c3">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Line>
+                  <Text id="mytext1" fx:id="txt" strokeType="OUTSIDE" strokeWidth="0.0" text="الملاحظات على ملف الحجز">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets right="60.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="35.0" VBox.vgrow="NEVER">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" HBox.hgrow="NEVER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <TextField id="mytext" fx:id="lab5" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="نتائج جيدة" />
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="14.00 - 15.99" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <TextField id="mytext" fx:id="lab6" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="نتائج جيدة جدا" />
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="16.00 - 17.99" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="35.0">
+                           <children>
+                              <TextField id="mytext" fx:id="lab7" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="قدرات متميزة بالتوفيق" />
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="18.00 - 20.00" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="60.0">
+                           <children>
+                              <TextField id="mytext" fx:id="lab8" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: #fb8989; -fx-border-width: 0.5;" text="معفى" />
+                              <VBox fx:id="vboxVide" alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" fx:id="caseVide" strokeType="OUTSIDE" strokeWidth="0.0" text="الخانة الفارغة  " />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT" layoutX="578.0" layoutY="10.0" HBox.hgrow="NEVER">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <TextField id="mytext" fx:id="lab1" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="نتائج غير مرضية تماما">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="00.00 - 08.99" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <TextField id="mytext" fx:id="lab2" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="عليك بالعمل أكثر">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="09.00 - 09.99" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="35.0">
+                           <children>
+                              <TextField id="mytext" fx:id="lab3" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="نتائج مقبولة">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="10.00 - 11.99" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" layoutX="10.0" layoutY="60.0">
+                           <children>
+                              <TextField id="mytext" fx:id="lab4" alignment="CENTER_RIGHT" style="-fx-border-color: #00b0f0; -fx-background-radius: 0; -fx-background-color: white; -fx-border-width: 0.5;" text="نتائج حسنة">
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <VBox alignment="CENTER" prefWidth="80.0" style="-fx-background-color: #deebf7;">
+                                 <children>
+                                    <Text id="mytext" strokeType="OUTSIDE" strokeWidth="0.0" text="12.00 - 13.99" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="3.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button id="btn" fx:id="analyseButt" mnemonicParsing="false" onAction="#fileAnalyse" text="حفظ ملف تحليل النتائج" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="DOWNLOAD" size="13.0" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="7.0" left="14.0" right="14.0" top="7.0" />
+                     </padding>
+                  </Button>
+                  <Button id="btn" fx:id="btnError" layoutX="698.0" layoutY="10.0" mnemonicParsing="false" onAction="#onShowError" text="تقرير موقع الأخطاء" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="INFO" size="13.0" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="7.0" left="14.0" right="14.0" top="7.0" />
+                     </padding>
+                  </Button>
+                  <Button id="btn" fx:id="button" layoutX="698.0" layoutY="10.0" mnemonicParsing="false" onAction="#observat" text="تطبيق الملاحظات" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST" size="13.0" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="7.0" left="14.0" right="14.0" top="7.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="20.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <ProgressBar id="progress_bar" fx:id="progress" prefWidth="460.0" progress="0.0" visible="false">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <effect>
+                        <Glow level="0.0" />
+                     </effect></ProgressBar>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="370.0">
+               <children>
+                  <Text id="mytext1" fx:id="remText" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="456.9640007019043" />
+               </children>
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="446.0">
+               <children>
+                  <Text id="mytext1" fx:id="remText1" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: akrambendridi23@gmail.com" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow height="10.0" radius="4.5" width="10.0" />
+         </effect>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefWidth="500.0" style="-fx-background-color: #00000000; -fx-border-radius: 8; -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DialogController">
+   <children>
+      <VBox style="-fx-background-radius: 8; -fx-border-radius: 8;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <VBox id="btn" alignment="TOP_CENTER" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-background-color: #f6f6f6;" stylesheets="@font_tajawal.css">
+               <children>
+                  <HBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7d6cee;" text="نسخ النقاط من ثلاثي إلى ثلاثي اخر في نفس المادة">
+                           <HBox.margin>
+                              <Insets right="60.0" top="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Button fx:id="btnclose" mnemonicParsing="false" onAction="#onCloseDialog" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <FontAwesomeIconView id="icon" glyphName="CLOSE" size="15.0" />
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="الملف الفارغ" underline="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Button id="btnFile" fx:id="btnSecondFile" mnemonicParsing="false" onAction="#onUploadSecondFile" onMouseEntered="#onMouseEntredFile2" onMouseExited="#onMouseExitedFile2" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #00000000;" />
+                              <VBox fx:id="vbox2" alignment="CENTER_RIGHT" prefHeight="20.0">
+                                 <children>
+                                    <Text fx:id="nameSecondFile" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="119.45299911499023">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@exch.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Text text="ملف النقاط" underline="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Button id="btnFile" fx:id="btnFirstFile" mnemonicParsing="false" onAction="#onUploadFirstFile" onMouseEntered="#onMouseEntredFile1" onMouseExited="#onMouseExitedFile1" prefHeight="120.0" prefWidth="120.0" style="-fx-background-color: #00000000;">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Button>
+                              <VBox fx:id="vbox1" alignment="CENTER_RIGHT" prefHeight="20.0">
+                                 <children>
+                                    <Text fx:id="nameFirstFile" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="119.45299911499023">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <Button id="btn" fx:id="btnCopy" mnemonicParsing="false" onAction="#onCopyNotes" text="نسخ النقاط إلى الملف الجديد (الفارغ)" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="7.0" left="14.0" right="14.0" top="7.0" />
+                                 </padding>
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="PASTE" size="13.0" />
+                                 </graphic>
+                              </Button>
+                              <ProgressBar id="progress_bar" fx:id="progress" prefWidth="350.0" progress="0.0">
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </ProgressBar>
+                              <Text id="txtprog" fx:id="txtProg" textAlignment="RIGHT" wrappingWidth="347.45299911499023">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <DropShadow height="10.0" radius="4.5" width="10.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>

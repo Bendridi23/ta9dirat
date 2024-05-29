@@ -1,0 +1,105 @@
+    @font-face
+    {
+        font-family: Tajawal;
+        src: url("Tajawal-Medium.ttf");
+    }
+
+    /*@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200&display=swap');*/
+
+    #vbox
+    {
+        -fx-background-image: url("back.png");
+        -fx-background-size:780px;
+        -fx-background-repeat:no-repeat;
+        -fx-background-position: bottom;
+    }
+    #mytext1
+    {
+        -fx-font-family: 'Tajawal Medium';
+
+    }
+    #icon:hover
+        {
+            -fx-fill:  #7d6cee;
+
+        }
+    #btnFile:hover
+        {
+            /*-fx-background-image: inherit;*/
+            -fx-cursor :hand;
+           /* -fx-background-image: url("arrow.png");
+            -fx-background-size:100px;
+            -fx-background-repeat:no-repeat;*/
+
+        }
+
+   /* #btnFile
+        {
+
+
+            -fx-background-image: url("excel1.png");
+           /* -fx-background-image-color: #00000000;*/
+          /*  -fx-background-size:100;
+            -fx-background-repeat:no-repeat;
+            -fx-position: fixed;
+
+        }*/
+    #mytext
+    {
+        -fx-font-family: 'Tajawal Medium';
+        -fx-font-size: 13px;
+    }
+    #txtprog
+    {
+            -fx-font-family: 'Tajawal Medium';
+            -fx-font-size: 11px;
+    }
+    #btn
+    {
+        -fx-background-color:  #7d6cee;
+        -fx-font-family: 'Tajawal Medium';
+        -fx-font-weight: Bold;
+        -fx-font-size: 13px;
+
+    }
+    #btn:hover
+        {
+
+            -fx-background-color:  #00b0f0;
+
+        }
+    #titre
+        {
+
+            -fx-font-family: 'Tajawal Medium';
+
+            -fx-font-size: 17px;
+
+
+        }
+        #titrebar
+                {
+
+                    -fx-font-family: 'Tajawal Medium';
+
+                    -fx-font-size: 9px;
+
+
+                }
+    #progress_bar> .bar
+    {
+        -fx-background-insets: 0 0 0 0;
+        -fx-background-radius: 0;
+        -fx-padding: 0.20em;
+    }
+    #progress_bar> .track
+    {
+        -fx-background-radius: 0;
+        -fx-background-color:white;
+    }
+    #progress_bar
+    {
+        -fx-background-radius: 0;
+        -fx-box-border:goldenrod;
+        -fx-accent: #00b0f0;
+    }
